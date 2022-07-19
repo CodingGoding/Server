@@ -48,6 +48,8 @@ function setName() {
 
   socket.name = name;
   yourNickName.innerText = name;
+
+  socket.emit("name", { name });
 }
 btn.addEventListener("onclick", setName);
 

@@ -9,8 +9,6 @@ app.use("/static", express.static(__dirname + "/public"));
 // localhost:3000으로 서버에 접속하면 클라이언트로 index.html을 전송한다
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/index.html");
-  // res.sendFile(__dirname + "/test.css");
-  // res.sendFile(__dirname + "/script.js");
 });
 
 // connection event handler
@@ -26,6 +24,10 @@ io.on("connection", function (socket) {
 
     // 접속된 모든 클라이언트에게 메시지를 전송한다
     io.emit("login", data.name);
+  });
+
+  socket.on("name", function (data) {
+    socket.name = data.name;
   });
 
   // 클라이언트로부터의 메시지가 수신되면
