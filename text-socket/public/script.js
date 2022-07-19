@@ -1,6 +1,8 @@
-var socket = io();
+var socket = io.connect('http://localhost:3000', { // ws:// 를 안쓰고 http를 쓴다
+  path: '/socket.io', // 서버 path와 일치시켜준다
+  transports: ['websocket']
+});
 var Name = "";
-
 $(function () {
   const btn = document.querySelector("#btn");
 
