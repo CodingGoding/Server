@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="/static/test.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="submitContainer">
+        <div class="form-group">
+          <label for="nickName" class="title">NickName: </label>
+          <input type="text" class="form-control" id="nickName" />
+        </div>
+        <button type="submit" class="btn btn-primary" id="btn" onclick="setName()">Change</button>
+      </div>
+
+      <div class="yourNickName" id="yourNickName">Null</div>
+
+      <div class="textContainer" id="textContainer"></div>
+
+      <form class="submitContainer">
+        <div class="form-group">
+          <label for="msgForm" class="title">Message: </label>
+          <input type="text" class="form-control" id="msgForm" />
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+      <div id="chatLogs"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>
