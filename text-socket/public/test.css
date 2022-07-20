@@ -33,22 +33,23 @@
 
   padding-left: 20px;
 
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
+  overflow: auto;
 }
 
 .textContainer::-webkit-scrollbar {
-  width: 10px; /* 스크롤바의 너비 */
+  width: 10px;
 }
 
 .textContainer::-webkit-scrollbar-thumb {
-  height: 30%; /* 스크롤바의 길이 */
-  background: #217af4; /* 스크롤바의 색상 */
+  height: 30%;
+  background: #217af4;
 
   border-radius: 10px;
 }
 
 .textContainer::-webkit-scrollbar-track {
-  background: rgba(33, 122, 244, 0.1); /*스크롤바 뒷 배경 색상*/
+  background: rgba(33, 122, 244, 0.1);
   border-radius: 10px;
 }
 
@@ -89,4 +90,42 @@
 
 input:focus {
   outline: none;
+}
+
+.myText {
+  margin-left: 78%;
+  margin-bottom: 5px;
+
+  padding-left: 10px;
+
+  width: 190px;
+  min-height: 30px;
+  height: auto;
+
+  border-radius: 10px;
+
+  background-color: #217af4;
+
+  display: flex;
+  align-items: center;
+
+  word-break: break-all;
+}
+
+.text {
+  margin-bottom: 5px;
+  border-radius: 10px;
+
+  padding-left: 10px;
+
+  width: 190px;
+  min-height: 30px;
+  height: auto;
+
+  background-color: #217af4;
+
+  display: flex;
+  align-items: center;
+
+  word-break: break-all;
 }
